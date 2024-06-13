@@ -1,0 +1,180 @@
+header,div#banner,main,footer{
+	border:1px solid #000;
+}
+
+
+header{
+	height: 44px;
+	/*设置弹性盒子*/
+	display: flex;
+	/*设置弹性项平均分布在容器中，且相邻项之间的距离相等*/
+	justify-content: space-between;
+	/*设置垂直居中*/
+	align-items: center;
+	/*因为position: relative;具有覆盖的作用，以下固定搭配：
+	position: relative;
+	z-index: 10;
+	*/
+	position: relative;
+	z-index: 10;
+}
+header>nav{
+	width: 33px;
+	height: 33px;
+	background: url(../img/nav.png) no-repeat;
+}
+/*header a:nth-child(2)表示header下的第二个的元素*/
+header>a:nth-child(2){
+	width: 50px;
+	height: 40px;
+	background: url(../img/center_02.png) no-repeat 0 0/*水平、垂直方向均为0*//100% 100%/*宽度和高度*/;
+}
+/*所有页面的Logo是含有一级标题的，一级标题在一个页面中只能使用一次，
+但是，一级标题的字体不显示*/
+header>a:nth-child(2) h1{
+	display: none;
+	/*让字体远离Logo
+	margin-left: -999px;或text-indent: -999px;
+	*/
+	text-indent: -999px;
+}
+header>a:nth-child(3){
+	width: 40px;
+	height: 44px;
+	/*设置弹性盒子*/
+	display: flex;
+	/*修改主轴方向，从x轴变为y轴*/
+	flex-direction: column;
+	/*设置水平居中*/
+	justify-content: center;
+	/*设置垂直居中*/
+	align-items: center;
+}
+header>a:nth-child(3) img{
+	width: 25px;
+	height: 25px;
+}
+/*定位的作用，让#banner.bg1的图片出现在#banner范围内*/
+#banner{
+	/*图片上移 缺点：覆盖上一部分的内容*/
+	margin-top: -19px;
+	height: 210px;
+	background: url(../products图片/grass.png) no-repeat 0 0/100% 100%;
+	/*#banner .bg1需要相对定位*/
+	position: relative;
+}
+#banner .fence{
+	height:210px;
+	background: url(../products图片/fence.png) no-repeat 0 0/100% 100%;
+}
+#banner .bg1{
+	height:210px;
+	background: url(../products图片/littleSheep.png) no-repeat 0 0/100% 100%;
+	/*以下内容是固定搭配*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#banner .bg2{
+	height:210px;
+	background: url(../products图片/bigSheep.png) no-repeat 0 0/100% 100%;
+	/*以下内容是固定搭配*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+main article{
+	border: 1px solid blue;
+	/*上下距离为25，左右距离为10*/
+	margin: 25px 10px;
+	/*上右下左*/
+	padding: 0px 5px 15px 5px;
+	/*设置背景色为渐变色，to bottom：方向向下*/
+	background: linear-gradient(to bottom,#bfe894,#f1ffe1);
+}
+article h2{
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@font-face{
+	font-family: titleFont;
+	src:url('../fonts/方正剪纸简体.ttf')
+}
+article h2 span{
+	width: 40%;
+	border: 1px solid red;
+	height: 70px;
+	background: url(../products图片/lvborder2.png) no-repeat center/100% 100%;
+	font-family:titleFont;
+	text-align: center;
+	line-height: 70px;
+}
+article h2 a{
+	width: 76px;
+	height: 50px;
+	background: url(../products图片/vegetable_icon.png) no-repeat center/cover;
+}
+.main_vegetable{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main_vegetable>ul{
+	border:1px solid #000;
+	display: flex;
+	/*分行*/
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/*用于多行：垂直居中*/
+	align-content: center;
+	}
+/*对.main_vegetable进行比例划分*/
+.main_vegetable>ul:first-child{
+	flex: 2;
+	margin-right: 10px;
+}
+.main_vegetable>ul:first-child li{
+	/*ul采用flex-wrap: wrap;
+	flex不能用数字，而是用百分比
+	*/
+	flex: 49%;
+	height: 150px;
+	border:1px solid red;
+	background: url(../products图片/pepper.png) no-repeat center/100% 100%;
+}
+.main_vegetable>ul:first-child li:first-child{
+	flex: 100%;
+	height: 250px;
+	margin-bottom: 5px;
+	background: url(../products图片/cabbage.png) no-repeat center/100% 100%;
+}
+.main_vegetable>ul:first-child li:last-child{
+	margin-left: 2%;
+	background: url(../products图片/spinach.png) no-repeat center/100% 100%;
+}
+
+.main_vegetable>ul:last-child{
+	flex: 1;
+}
+
+.main_vegetable>ul:last-child li{
+	/*ul采用flex-wrap: wrap;
+	flex不能用数字，而是用百分比
+	*/
+    
+	flex: 100%;
+	height: 150px;
+	border:1px solid red;
+	background: url(../products图片/tomato.png) no-repeat center/100% 100%;
+}
+.main_vegetable>ul:last-child li:first-child{
+	
+	flex: 100%;
+	height: 250px;
+	margin-bottom: 5px;
+	background: url() no-repeat center/cover;
+}
