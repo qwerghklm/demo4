@@ -1,0 +1,47 @@
+header{
+	height: 75px;
+	width: 100%;
+}
+
+.header_title{
+	height: 45px;
+	width: 100%;
+	/*给背景图片添加渐变颜色*/
+	background: url(../home图片/yun.png) no-repeat,linear-gradient(to bottom,rgb(97,154,195,1) -20%,rgb(255,254,250,.8));
+	/*-20%代表渐变色的初始位置0变为-20%，目的是改变初始位置的颜色
+	linear-gradient(to bottom,rgb(97,154,195,1) -20,rgb(255,254,250,.8))
+	*/
+}
+/*知识点1：search图片*/
+.search{
+	height: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*表示上下边距为3px,左右边距为10px*/
+	padding: 3px 10px;
+}
+.search a{
+	height: 24px;
+	flex: 1;
+	border-radius: 8px;
+	/**/
+	box-shadow: 0px 2px 4px 1px lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search a::after{
+	content: "";
+	width: 18px;
+	height: 18px;
+	/*center/cover:图片大小 以设定的宽高值的方式显示*/
+	background: url(../home图片/sousuo.png) no-repeat center/cover;
+}
+#banner{
+	width: 100%;
+	height: 300px;
+	border: 1px solid #000;
+	margin: 5px 0px;
+}
