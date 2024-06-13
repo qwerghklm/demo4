@@ -1,0 +1,43 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,ol,li{
+	list-style: none;
+}
+a,a:hover,a:visited,a:link{
+	text-decoration: none;
+	color: black;
+}
+img{
+	/*边框样式无*/
+	border: none;
+	/*垂直方向上的对齐方式为居中*/
+	vertical-align: middle;
+}
+input{
+	/*input输入框会带有默认的外轮廓,
+	outline:none是去除外轮廓的意思,*/
+	outline: none;
+	border: none;
+}
+header,main,footer,section,article,div,ul,ol,li,p,span,a,input{
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+}
+html{
+	font-size: 16px;
+}
+body{
+	overflow: hidden;
+	/*-webkit-tap-highlight-color:transparent;这个属性只用于iOS (iPhone和iPad)。、
+	当你点击一个链接或者通过Javascript定义的可点击元素的时候，需要设置半透明的值*/
+	-webkit-tap-highlight-color:transparent;
+	font-size: 12px;
+	width: 100%;
+	min-width: 320px;
+	max-width: 540px;
+	margin: 0 auto;
+}
+
+	
