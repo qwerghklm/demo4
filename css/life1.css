@@ -1,0 +1,383 @@
+body{
+  max-width: 540px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fffefa;
+}
+
+/* ---------- 头部 ---------*/
+header{
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  height: 44px;
+  /* background-image:url('../img/life/.png'),linear-gradient(to bottom,rgba(97,154,195,1) -20%,rgba(255,254,250,.8) 100%); */
+  position:fixed;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav{
+  position: absolute;
+  left:0;
+  top:6px;
+  height: 32px;
+  width: 30px;
+  background: url('../img/works/nav.png') no-repeat 0 0/100% 100%;
+}
+header> a{
+  width: 50px;
+  height: 44px;
+  background: url('../img/home/Logo.png') no-repeat 0 0/100% 100%;
+}
+header > a h1{
+  margin-left:-999px;
+  display:none
+}
+
+/* -----------焦点图------------- */
+#banner{
+  height: 140px;
+  /* margin-top:48px; */
+  background: linear-gradient(to top,rgba(255,255,255,.3),rgba(255,255,255,.3)) , url(../img/life/life_cloud.png) center center /100% 100% no-repeat;
+}
+
+/* ---------- 主体部分 ---------*/
+/* main{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+	height:375px;
+	/* background: url(../img/life/map.png) center center / contain no-repeat;
+} */
+main{
+  position: relative;
+}
+
+main img{
+  width: 100%;
+}
+
+.animationRoute{
+  position:absolute;
+  top:0;
+  left:0;
+/*  width:100%;
+  height: 100%; */
+  bottom:0;
+  right:0;
+  background-color:rgba(255,255,255,0);
+}
+
+
+/* 闪烁的点 */
+.animationRoute span{
+  display:block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: red;
+  position:absolute;
+}
+
+@keyframes flicker {
+  0%{
+    box-shadow: 0px 0px 0px 0px rgb(255,0,0,.8);
+  }
+  70%{
+    box-shadow: 0px 0px 7px 7px rgb(255,0,0,.4);
+  }
+  100%{
+    box-shadow: 0px 0px 10px 10px rgb(255,0,0,0);
+  }
+}
+
+.animationRoute .circle::after{
+  content:"";
+  display:block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 7px rgb(255,0,0,.5);
+  animation: flicker 2s ease-out infinite both
+}
+
+  /* 每个点的位置不同 */
+.animationRoute .circle1{
+  /* position:absolute; */
+  top:190px;
+  left:75px;
+}
+.animationRoute .circle2{
+  top:85px;
+  left:225px;
+}
+
+.animationRoute .circle3{
+ top:175px;
+ left:250px; 
+}
+.animationRoute .circle4{
+  top:260px;
+  left:230px;
+}
+
+ /* 移动的卡车 */
+.animationRoute #track{
+  position:absolute;	
+  width: 40px;
+  height: 40px;
+	top:230px;
+	left:255px;
+  background: url('../img/life/truck-a.svg') no-repeat center/cover; 
+}
+
+.trackmove3{
+    animation: trackMove3 6s linear 1 ,
+				hDistance3 6s linear 1 forwards, 
+				vDistance3 6s linear 1 forwards;
+}
+
+.trackmove2{
+    animation: trackMove2 6s linear 1 ,
+				hDistance2 6s linear 1 forwards, 
+				vDistance2 6s linear 1 forwards;
+}
+.trackmove1{
+    animation: trackMove1 6s linear 1 ,
+				hDistance1 6s linear 1 forwards, 
+				vDistance1 6s linear 1 forwards;
+}
+
+@keyframes trackMove3{
+	0%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+	15%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	}	
+	35%{
+	   background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	 }
+	55%{
+	   background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	 }
+	75%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	} 
+	95%{
+	  background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	}
+	100%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+}
+@keyframes trackMove2{
+	0%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+	15%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	}	
+	35%{
+	   background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	 }
+	55%{
+	   background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	 }
+	75%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	} 
+	95%{
+	  background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	}
+	100%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+}
+@keyframes trackMove1{
+	0%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+	15%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	}	
+	30%{
+	   background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	 }  
+	40%{
+		 background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	 }
+	50%{
+	   background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	 }
+	60%{
+	  background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	} 
+	70%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+	75%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	} 
+	85%{
+	  background: url('../img/life/truck-b.svg') no-repeat center/cover;
+	}
+	95%{
+	  background: url('../img/life/truck-c.svg') no-repeat center/cover;
+	}	
+	100%{
+	  background: url('../img/life/truck-a.svg') no-repeat center/cover;
+	}
+}
+
+@keyframes hDistance3 {
+	0%{
+		left:255px
+	}
+	100%{
+		left:205px
+	}
+}
+@keyframes vDistance3 {
+	0%{
+		top:230px
+	}
+	100%{
+		top:155px
+	}
+}
+@keyframes hDistance2 {
+	0%{
+		left:205px
+	}
+	100%{
+		left:205px
+	}
+}
+@keyframes vDistance2 {
+	0%{
+		top:155px
+	}
+	100%{
+		top:95px
+	}
+}
+@keyframes hDistance1 {
+	0%{
+		left:205px
+	}
+	40%{
+		left:200px
+	}
+	70%{
+		left:170px
+	}
+	75%{
+		left:165px
+	}	
+	100%{
+		left:110px
+	}
+}
+@keyframes vDistance1 {
+	0%{
+		top:95px
+	}
+	40%{
+	    top:135px	
+	}
+	70%{
+		top:105px;
+	}
+	75%{
+		top:105px;
+	}
+	100%{
+		top:120px
+	}
+}
+
+
+ /* 蒙版，单独展示产品，3d效果 */
+.product_bg{
+	 position:relative;
+	/*z-index:1; */
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,.6) ;
+	transform-style:preserve-3d;
+	perspective-origin:188px 200px;
+	perspective:1000px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	visibility:hidden;
+}
+
+#product{
+ 	width: 188px;
+	height: 250px;	
+	transform:translateZ(100px);
+}
+
+.product1{
+	background: url('../img/life/animal.png') no-repeat 40px -100px/200%;
+	animation:pdRotate 1s ease 5
+} 
+.product2{
+	background: url('../img/life/animal.png') no-repeat -220px 70px/200%;
+	animation:pdRotate 1s ease 5	
+} 
+.product3{
+/* 	background: url('../img/life/animal.png') no-repeat 10px -480px/200%; */
+	background: url('../img/life/animal.png') no-repeat -200px -280px/200%;	
+	animation:pdRotate 1s ease 5
+}
+.product4{
+background: url('../img/life/animal.png') no-repeat 10px -480px/200%;
+	animation:pdRotate 1s ease 5
+}
+
+@keyframes pdRotate {
+	    0%{
+	        transform:translateZ(100px) rotateY(0deg)
+	    } 
+	    100%{
+	        transform:translateZ(100px) rotateY(360deg)
+	    } 
+}
+
+
+
+/* -----------页脚------------- */
+footer{
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: -10;
+  width: 100%;  
+  max-width: 540px;
+  min-width: 320px;
+  height: 120px;
+  background: url('../img/life/life_grass.png')  center/cover no-repeat;
+  line-height:36px;
+  color: #000;
+  font-size:16px;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
