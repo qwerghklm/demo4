@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta  name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1，
+		maximum-scale=1,user-scalable=no"/>
+		<title>网站首页</title>
+		<link rel="stylesheet" href="./css/public.css" />
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<style>
+			  .swiper {
+			      width: 100%;
+			    
+			    }
+			    .swiper-slide {
+			      background-position: center;
+			      background-size: cover;
+			      width: 300px;
+			      height: 300px;
+			    }
+			    .swiper-slide img {
+			      display: block;
+			      width: 100%;
+			    }
+				/*找到对应的位置进行修改*/
+				.swiper-pagination-bullet{
+					background: white;
+					/*修改透明度*/
+					opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+				}
+				.swiper-pagination-bullet-active{
+					background: gold;
+				}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header_title">1</div>
+			<div class="search">
+				<a href=""></a>
+			</div>
+		</header>
+		<div id="banner">
+			  <div class="swiper mySwiper">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide">
+			        <img src="./home图片/ju.jpg" />
+			      </div>
+			      <div class="swiper-slide">
+			        <img src="./home图片/xi.jpg" />
+			      </div>
+			      <div class="swiper-slide">
+			        <img src="./home图片/hua.jpg" />
+			      </div>
+			      <div class="swiper-slide">
+			        <img src="./home图片/lan.jpg" />
+			      </div>
+			      <div class="swiper-slide">
+			        <img src="./home图片/orange.png" />
+			      </div>
+			      <div class="swiper-slide">
+			        <img src="./home图片/dingxiang.jpg" />
+			      </div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			  </div>
+		</div>
+	</body>
+	<script src="js/swiper-bundle.min.js"></script>
+	 <script>
+	    var swiper = new Swiper(".mySwiper", {
+			/*轮播图*/
+			  autoplay: {
+			    delay: 2000
+			    },
+			
+	      effect: "coverflow",
+	      grabCursor: true,
+	      centeredSlides: true,
+	      slidesPerView: "auto",
+	      coverflowEffect: {
+	        rotate: 50,
+	        stretch: 0,
+	        depth: 100,
+	        modifier: 1,
+	        slideShadows: true,
+	      },
+	      pagination: {
+	        el: ".swiper-pagination",
+	      },
+	    });
+	  </script>
+</html>
