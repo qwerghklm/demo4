@@ -1,0 +1,143 @@
+header{
+	height: 40px;
+	border: 1px solid #000;
+	/*把下面的图片固定到header的固定搭配*/
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	transform:translateX(-50%);
+	width: 100%;
+	min-width: 320px;
+	max-width: 540px;
+}
+#banner{
+	height: 130px;
+	border: 1px solid #000;
+	background: url(../life图片/life_cloud.png) no-repeat center/100% 100%;
+}
+main{
+	/*作为mian span的参照物*/
+	position: relative;
+}
+main img{
+	width: 100%;
+}
+main span{
+	/*把行内元素设置为块级元素*/
+	display: block;
+	/*固定定位与相对定位一起使用*/
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #f00;
+	border-radius: 50%;
+}
+@keyframes flicker{
+	0%{
+		/*水平阴影、垂直阴影、模糊度、阴影大小、颜色值*/
+		box-shadow: 0px 0px 0px 0px rgb(255,0,0,.8);
+	}
+	70%{
+		box-shadow: 0px 0px 7px 7px rgb(255,0,0,.4);
+	}
+	100%{
+		box-shadow: 0px 0px 10px 10px rgb(255,0,0,0);
+	}
+}
+.animationRoute .circle::after{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 0px rgb(255,0,0,.4);
+	animation: flicker 2s ease-out infinite both;
+	
+}
+.circle1{
+	top: 190px;
+	left: 75px;
+	}
+.circle2{
+	top: 85px;
+	left: 225px;
+	}
+.circle3{
+	top: 175px;
+	left: 250px;
+	}
+.circle4{
+	top: 245px;
+	left: 216px;
+	}
+	/*移动的卡车*/
+.animationRoute #track{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 230px;
+	left: 255px;
+	background: url(../life图片/QQ图片20240610002555.png) no-repeat center/cover;
+}	
+.trackmove3{
+	animation:trackMove3 6S linear 1,
+	hDistance3 6S linear 1 forwards,
+	vDistance3 6S linear 1 forwards;
+}
+.trackmove2{
+	animation:trackMove2 6S linear 1,
+	hDistance2 6S linear 1 forwards,
+	vDistance2 6S linear 1 forwards;
+}
+.trackmove1{
+	animation:trackMove1 6S linear 1,
+	hDistance1 6S linear 1 forwards,
+	vDistance1 6S linear 1 forwards;
+}
+.masking{
+	width: 100%;
+	height:100%;
+	background-color: rgb(0,0,0,.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style:preserve-3d;
+	/*视距（眼睛到屏幕的距离）*/
+	perspective: 1000px;
+}
+#product{
+	width: 50%;
+	height: 73%;
+	border: 1px solid #000;
+	background: url(../life图片/animal.png) no-repeat 0px -476px/200%;
+	transform: translateZ(100px) rotateY(0deg);
+	animation:pdRotate 1s ease 5 ;
+} 
+/*设置动画 连续旋转*/
+@keyframes pdRotate{
+	0%{
+		transform: translateZ(180px) rotateY(0deg);
+	}
+	100%{
+		transform: translateZ(180px) rotateY(360deg);
+	}
+}
+/*固定页脚位置*/
+footer{
+	height: 110px;
+	border: 1px solid #000;
+	background: url(../life图片/life_grass.png) no-repeat center/cover;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform:translateX(-50%);
+	width: 100%;
+	min-width: 320px;
+	max-width: 540px;
+}
